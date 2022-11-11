@@ -1,0 +1,129 @@
+@import 'styles/unit.scss';
+
+.card{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: rem(80);
+
+    &__image{
+        max-width: 49%;
+        width: 100%;
+        position: relative;        
+    }
+
+    &__info{
+        flex-grow: 1;
+        
+        &__ctg{
+            font-family: 'Roboto';
+            font-weight: 700;
+            font-size: rem(20);
+            line-height: rem(24);
+            color: var(--white-color);
+            opacity: 0.4;
+            margin-bottom: rem(8);
+        }
+
+        &__title{
+            font-weight: 700;
+            font-size: rem(40);
+            line-height: rem(49);
+            color: var(--white-color);
+            margin-bottom: rem(32);
+        }
+
+        &__list{
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            gap: rem(24);
+
+            &Item{
+                background: inherit;
+                border: none;
+                color: var(--white-color);
+                cursor: pointer;
+                font-weight: 500;
+                font-size: rem(18);
+                line-height: rem(22);
+                padding-left: rem(16);
+                text-align: start;
+            }
+        }
+
+    }
+}
+
+.card__reverse{
+    flex-direction: row-reverse;
+}
+
+.item__active{
+    color: var(--white-color);
+    font-weight: 600;
+    position: relative;
+
+    &::before{
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--white-color);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .card{
+        gap: rem(40);
+        &__info{
+            &__ctg{
+                font-size: rem(18);
+            }
+            &__title{
+                font-size: rem(30);
+                line-height: rem(34);
+            }
+
+            &__list{
+                &Item{
+                    font-size: rem(16);
+                }
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 644px) {
+    .card{
+        gap: rem(20);
+        &__info{
+            &__ctg{
+                font-size: rem(18);
+                line-height: rem(21);
+            }
+
+            &__title{
+                font-size: rem(28);
+                line-height: rem(34);
+                margin-bottom: rem(24);
+            }
+
+            &__list{
+                gap: rem(15);
+
+                &Item{
+                    font-size: rem(16);
+                    line-height: rem(20);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import "styles/unit.scss";
+
+.list{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: rem(80);
+}
+
+@media only screen and (max-width: 768px) {
+    .list{
+        gap: rem(32);
+    }
+}

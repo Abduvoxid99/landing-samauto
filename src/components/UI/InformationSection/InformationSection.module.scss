@@ -1,0 +1,18 @@
+@import "styles/unit.scss";
+
+.section{
+    padding: rem(100) 0;
+    background: var(--black-bg-color);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: rem(120);
+}
+
+@media only screen and (max-width: 644px) {
+    .section{
+        padding: rem(56) 0;
+    }
+}

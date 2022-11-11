@@ -1,0 +1,117 @@
+@import "styles/unit.scss";
+
+.card{
+    display: flex;
+    align-items: center;
+    padding-right: rem(36);
+    height: auto;
+
+    &__carousel{
+        max-width: 59%;
+        width: 100%;
+        aspect-ratio: 205/131;
+        max-height: rem(524);
+    }
+    &__info{
+        padding: rem(24);
+
+        &__title{
+            font-weight: 700;
+            font-size: rem(28);
+            line-height: rem(34);
+            color: var(--dark-gray-color);
+            margin-bottom: rem(16);
+        }
+
+        &__subtitle{
+            font-size: rem(20);
+            line-height: rem(32);
+            color: vat(--dark-gray-color);
+        }
+
+        &__btn{
+            display: none;
+        }
+    }
+}
+
+.card__reverse{
+    flex-direction: row-reverse;
+    padding-left: rem(36);
+    padding-right: 0;
+}
+
+.openContent{
+    display: block!important;
+    overflow: auto;
+}
+
+.openBtn{
+    transform: rotate(-180deg);
+    animation: openAnim 0.3s forwards;
+}
+
+.closeBtn{
+    animation: closeAnim 0.3s forwards;
+}
+
+@media only screen and (max-width: 768px) {
+    .card__reverse{
+        padding-left: rem(16);
+    }
+    .card{
+        padding-right: rem(16);
+        
+        &__carousel{
+            max-width: 50%;
+        }
+
+        &__info{
+            padding: rem(16);
+
+            &__title{
+                font-size: rem(18);
+                line-height: rem(22);
+                margin-bottom: rem(12);
+            }
+
+            &__subtitle{
+                font-size: rem(16);
+                line-height: rem(26);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    .card{
+        flex-direction: column;
+        padding: 0;
+        &__carousel{
+            max-width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .card{
+        
+        &__info{
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__subtitle{
+                display: -webkit-box;
+                -webkit-line-clamp: 6;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
+            }
+
+            &__btn{
+                display: flex;
+            }
+        }
+    }
+}

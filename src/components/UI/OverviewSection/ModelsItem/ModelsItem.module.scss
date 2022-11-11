@@ -1,0 +1,25 @@
+@import "styles/unit.scss";
+
+.item{
+    padding: 0 rem(24) rem(16) rem(24);
+    font-weight: 500;
+    font-size: rem(24);
+    line-height: rem(29);
+    color: var(--mid-gray-color);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.active{
+    font-weight: 700;
+    color: var(--dark-gray-color);
+    border-bottom: 6px solid var(--dark-color);
+}
+
+@media only screen and (max-width: 768px) {
+    .item{
+        padding: 0 rem(16) rem(16) rem(16);
+        font-size: rem(18);
+        line-height: rem(22);
+    }
+}

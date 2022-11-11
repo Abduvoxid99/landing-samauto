@@ -1,0 +1,67 @@
+@import "styles/unit.scss";
+
+.root {
+  padding: rem(100) 0;
+  display: flex;
+  align-items: center;
+  .row {
+    padding: rem(0) rem(60);
+    display: flex;
+    column-gap: rem(80);
+    align-items: center;
+    .first__col {
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      .video {
+        video {
+          box-shadow: 0px 4px rem(80) rgba(0, 0, 0, 0.25);
+          border-bottom: 2px solid transparent;
+          object-fit: cover;
+          cursor: pointer;
+          width: 100%;
+          max-height: rem(630);
+          aspect-ratio: 212/315;
+        }
+        .pause {
+          width: rem(86);
+          height: rem(86);
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      img {
+        cursor: pointer;
+        width: 100%;
+      }
+    }
+    .second__col {
+      width: 60%;
+
+      h2 {
+        margin-top: rem(12);
+        font-weight: 600;
+        font-size: rem(40);
+        line-height: rem(49);
+      }
+      p {
+        margin-top: rem(24);
+        font-size: rem(20);
+        line-height: rem(32);
+        color: #1a2024;
+      }
+      .btn {
+        margin-top: rem(80);
+        padding: rem(10) rem(24);
+        background: var(--main-color);
+        color: var(--white-color);
+        font-size: rem(16);
+        line-height: rem(20);
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+@import "styles/unit.scss";
+.button {
+  cursor: pointer;
+  border: 0;
+  height: rem(52);
+  border-radius: rem(0);
+  font-weight: 500;
+  font-size: rem(16);
+  height: rem(52);
+  line-height: rem(20);
+  padding: rem(16) rem(20);
+  display: flex;
+  align-items: center;
+  column-gap: rem(16);
+  background: #f4f4f4;
+  transition: all 0.25s ease-in-out;
+  &:hover {
+    transform: translateY(-1px);
+  }
+  &.fullWidth {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &.large {
+    height: rem(48);
+  }
+  &.medium {
+    height: rem(46);
+  }
+  &.small {
+    font-size: rem(15);
+    line-height: rem(18);
+  }
+  &:disabled,
+  &:disabled:hover {
+    transform: translateY(0) !important;
+    cursor: not-allowed;
+  }
+}
+
+.redButton {
+  cursor: pointer;
+  border: 0;
+  width: auto;
+  border-radius: 0;
+  font-weight: 500;
+  font-size: rem(16);
+  height: rem(52);
+  line-height: rem(20);
+  padding: rem(16) rem(24);
+  background: var(--main-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  column-gap: rem(16);
+  transition: all 0.25s ease-in-out;
+  &:hover {
+    transform: translateY(-1px);
+  }
+  &.fullWidth {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &.large {
+    height: rem(48);
+  }
+  &.medium {
+    height: rem(46);
+  }
+  &.small {
+    font-size: rem(15);
+    line-height: rem(18);
+  }
+  &:disabled,
+  &:disabled:hover {
+    transform: translateY(0) !important;
+    background-color: #efefef;
+    color: #84919a;
+    cursor: not-allowed;
+    border: none !important;
+  }
+}
+
+.readMore_btn{
+  display: flex;
+  border: none;
+  background: transparent;
+  padding: rem(10) 0 0 0;
+  align-items: center;
+  
+  & > span{
+    color: var(--main-color);
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: rem(19);
+  }
+}
+
+.openContent{
+  display: block!important;
+  overflow: auto;
+}
+
+.openBtn{
+  transform: rotate(-180deg);
+  animation: openAnim 0.15s forwards;
+}
+
+
+
+@keyframes openAnim {
+  0%{
+      transform: rotate(0);
+  }
+  100%{
+      transform: rotate(-180deg);
+  }
+}
+
+@keyframes closeAnim {
+  0%{
+      transform: rotate(-180deg);
+  }
+  100%{
+      transform: rotate(0);
+  }
+}

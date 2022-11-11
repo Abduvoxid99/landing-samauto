@@ -1,0 +1,81 @@
+@import "unit";
+@import "../../public/fonts/font.css";
+:root {
+  --white-color: #ffffff;
+  --main-color: #c62829;
+  --secondary-color: #be2829;
+  --black-color: #000000;
+  --black-bg-color: #0b1923;
+  --dark-gray-color: #1a2024;
+  --mid-gray-color: #84919a;
+  --grey-color: #cccccb;
+  --white-bg-color: #F8F8F8;
+  --strok-color: #E4E3E4;
+  --dark-color: #05141F;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.headroom-wrapper {
+  width: 100%;
+}
+
+.headroom {
+  z-index: 999 !important;
+  position: fixed !important;
+  transform: none !important;
+}
+
+.slick-active > * {
+  background: var(--main-color)!important;
+  opacity: 1 !important;
+}
+
+.slick-dots{
+  width: auto!important;
+  max-width: 100%;
+  position: absolute!important;
+  bottom: 24px!important;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex!important;
+  align-items: center;
+  gap: 32px;
+}
+
+@media only screen and (max-width: 768px) {
+  .slick-dots{
+    bottom: rem(12)!important;
+    & > button{
+      display: none;
+    }
+  }
+}

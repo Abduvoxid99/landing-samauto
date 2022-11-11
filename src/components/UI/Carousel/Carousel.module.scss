@@ -1,0 +1,53 @@
+@import "styles/unit.scss";
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+
+    &__controls{
+        width: auto;
+        max-width: 100%;
+        position: absolute;
+        bottom: 24px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+
+    &__arrows {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__dots {
+        width: rem(28);
+        height: rem(6);
+        background: var(--white-color);
+        opacity: 0.5;
+    }
+
+    &__dotsList{
+        display: flex;
+        align-items: center;
+        gap: rem(8);
+
+        & >li{
+            display: flex;
+            width: auto;
+            height: auto;
+            margin-left: 0;
+        }
+    }
+
+    & > div, & > div > div{
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+}

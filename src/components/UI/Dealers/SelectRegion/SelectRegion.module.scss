@@ -1,0 +1,67 @@
+@import "styles/unit.scss";
+
+.card {
+  background: var(--white-color);
+  width: 100%;
+  height: 100%;
+  padding: rem(24);
+  overflow: hidden;
+  h3 {
+    font-size: rem(20);
+    line-height: rem(24);
+    letter-spacing: 0.38px;
+    color: #05141f;
+  }
+  .buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .btn {
+      margin-top: rem(24);
+      background: var(--white-color);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      display: flex;
+      justify-content: center;
+    }
+    .active__btn {
+      color: var(--white-color);
+      background: var(--main-color);
+    }
+  }
+  .regions {
+    margin-top: rem(8);
+    display: flex;
+    flex-direction: column;
+    height: rem(360);
+    width: 100%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: rem(8);
+    }
+    &::-webkit-scrollbar-track {
+      background: #eeedee;
+      border-radius: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgba(5, 20, 31, 0.6);
+      border-radius: rem(5);
+      width: rem(4);
+    }
+    &__item {
+      padding: rem(16) rem(18);
+      p {
+        font-size: rem(15);
+        line-height: rem(20);
+        cursor: pointer;
+        display: flex;
+        gap: rem(8);
+        letter-spacing: -0.24px;
+        color: #05141f;
+      }
+    }
+    &__active__item {
+      p {
+        color: var(--secondary-color);
+      }
+    }
+  }
+}

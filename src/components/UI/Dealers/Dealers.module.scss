@@ -1,0 +1,34 @@
+@import "styles/unit.scss";
+
+.root {
+  padding: rem(120) 0;
+
+  .container {
+    .first__row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        font-weight: 600;
+        font-size: rem(40);
+        line-height: rem(48);
+        color: #262626;
+      }
+      p {
+        margin-top: rem(24);
+        font-weight: 400;
+        font-size: rem(20);
+        line-height: rem(32);
+        color: #262626;
+      }
+    }
+    .second__row {
+      margin-top: rem(48);
+      box-shadow: 0 rem(4) rem(32) rgba(31, 8, 8, 0.06);
+      display: grid;
+      grid-template-columns: rem(384) 1fr;
+      width: 100%;
+      height: rem(520);
+    }
+  }
+}

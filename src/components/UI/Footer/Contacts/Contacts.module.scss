@@ -1,0 +1,18 @@
+@import "styles/unit.scss";
+
+.contacts{
+    display: flex;
+    justify-content: space-between;
+
+    &__info{
+        color: var(--white-color);
+        font-size: rem(14);
+        line-height: rem(24);
+    }
+
+    &__list{
+        list-style: none;
+        display: flex;
+        gap: rem(12);
+    }
+}
